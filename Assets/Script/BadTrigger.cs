@@ -9,9 +9,10 @@ public class BadTrigger : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             GameHandler.gameHandler.HiScore();
-            //destroy the player
-            Destroy(other.gameObject);
+            //destroy all the player ragdoll objects tagged with "player"
+
             GameHandler.gameHandler.Buttons();
+            Time.timeScale = 0;
         }
     }
 }
